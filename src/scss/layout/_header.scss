@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bg-header {
+  background-color: v.$secundario;
+
+  @include m.ordenador {
+    margin-left: v.$asideTamaño;
+  }
+}
+
+.header {
+  background-color: v.$secundario;
+  padding: v.$paddingSecciones;
+  text-align: center;
+  border-bottom: 1px solid v.$blanco;
+
+  //posicionando div
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header .titulo {
+  text-shadow: 3px 1px 2px #154FA7;
+  @include m.ordenador {
+    text-shadow: 4px 6px 2px #154fa7;
+  }
+
+  h1{
+    margin: 0;
+  }
+
+  font-weight: lighter;
+  font-size: 2vw;
+  color: v.$blanco;
+  width: 100%;
+}
+
+.header span {
+  text-shadow: none;
+  font-size: 2vw;
+  color: v.$azul;
+  font-weight: bold;
+  display: block;
+}

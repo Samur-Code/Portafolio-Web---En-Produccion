@@ -1,0 +1,24 @@
+{
+  "name": "portafolio-samuel",
+  "version": "1.0.0",
+  "description": "portafolio para trabajo de desarollo web",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "sass": "gulp css",
+    "d": "gulp"
+  },
+  "keywords": [
+    "portafolio",
+    "blogs",
+    "proyectos",
+    "empleo"
+  ],
+  "author": "Samuel Arian Gomez Lopez",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.80.7"
+  }
+}

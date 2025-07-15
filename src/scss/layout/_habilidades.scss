@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tecnologias__grid {
+    text-align: center;
+    display: grid;
+
+    @include m.tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .containerImagen {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: v.$azul;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    img {
+        width: 10rem;
+    }
+
+    p {
+        color: #fff
+    }
+
+    .contenedorHabilidades {
+        margin: 1rem;
+        border: .5rem solid rgba(43, 64, 94, 1);
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}

@@ -1,0 +1,98 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.secciones {
+    background-color: v.$secundario;
+
+    @include m.ordenador {
+        margin-left: v.$asideTamaño;
+    }
+}
+
+.main {
+    background-color: v.$secundario;
+    color: v.$blanco;
+    padding: v.$paddingSecciones;
+    text-align: center;
+    border-bottom: 1px solid v.$blanco;
+
+    //posicionando div
+    margin: 0 auto;
+
+    @include m.ordenador {
+        justify-content: start;
+        text-align: left;
+    }
+}
+
+
+.main {
+    background-color: v.$blanco;
+    background-color: v.$secundario;
+    color: v.$blanco;
+
+    article {
+        width: 100%;
+        padding: 2rem;
+
+        @include m.ordenador {
+            padding: v.$paddingSecciones;
+        }
+
+        &:nth-child(odd) {
+            //background-color: v.$secundario;
+            color: v.$blanco;
+        }
+
+        .texto {
+            max-width: 100%;
+            font-size: 2.5rem;
+            text-align: center;
+
+            @include m.ordenador {
+                text-align: left;
+                font-size: 4.5rem;
+            }
+
+            p {
+                color: v.$blanco;
+            }
+        }
+
+        h2 {
+            font-size: 6rem;
+            text-align: center;
+            margin: 0;
+
+            @include m.ordenador {
+                text-align: left;
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+}
+
+.texto {
+    .tituloUniv {
+        position: static;
+        color: v.$main-color;
+
+        &:hover {
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+//secciones
+article {
+    h2 {
+        padding: 2rem 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}

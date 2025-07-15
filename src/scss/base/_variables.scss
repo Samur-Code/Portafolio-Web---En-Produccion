@@ -1,0 +1,39 @@
+$fuente_principal: "Pixelify Sans", serif;
+
+// Colores
+$azul: #154fa7;
+$azul-claro: #7092be;
+$main-color: #13161c;
+$secundario: #0b0b0b;
+$rosado: #ff69b4;
+$negro: #000000;
+$blanco: #FFFFFF;
+$c2: #cddaeb;
+
+//redes colores
+$cFacebook: #3b5998;
+$cWhatsapp: #25d366;
+$cYoutube: #c4302b;
+$cLinkedin: #0e76a8;
+$error: rgb(230, 40, 40);
+$correcto: rgb(179, 233, 179);
+
+//mixins
+$telefono: 480px;
+$tablet: 768px;
+$pc: 1200px;
+$pcMax: 1400px;
+
+//dimensiones
+$asideTamaño: 30rem;
+$paddingSecciones: 4.5rem;
+$sizeFondo: 3rem;
+
+//patrones de fondo
+$backgroundHeader:
+    conic-gradient(at 60% 60%,var($blanco) 75%,#0000 0)
+     0 0/calc(5*var($sizeFondo)/2) calc(5*var($sizeFondo)/2),
+    repeating-conic-gradient(var($blanco) 0 25%,#0000 0 50%)
+     0 0/calc(5*var($sizeFondo)) calc(5*var($sizeFondo)),
+    repeating-conic-gradient(var($c2) 0 25%,var($blanco) 0 50%)
+     0 0/var($sizeFondo) var($sizeFondo); 

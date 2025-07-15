@@ -1,0 +1,146 @@
+:root{
+  --main-color: #7092be;
+  --secundario: #2b405e;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.mein-header {
+  display: flex;
+}
+
+.header, main, .footer{
+  margin-left: 350px;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header .titulo{
+  text-align: center;
+  font-weight: 100;
+  font-size: 4rem;
+  color: #7092be;
+}
+
+.header span{
+  font-size: 3rem;
+  display: block;
+  font-weight: bold;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  float: left;
+  width: 350px;
+  height: 100vh;
+  background-color: var(--main-color);
+}
+
+aside .image-samuel{
+  margin-top: 40px;
+  width: 200px;
+  height: 200px;
+  background-image: url(../src/img/cv.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.nav{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.nav a {
+  text-align: left;
+  margin: 20px 0;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.nav a span{
+  transition: 0.5S;
+}
+
+.nav a span:hover{
+  transition: 0.5S;
+  margin-left: 5px;
+}
+
+
+main {
+  margin-left: 105px;
+  margin-top: 20vh;
+  position: static;
+}
+
+main article img {
+  width: 350px;
+  height: 210px;
+}
+
+footer {
+  float: left;
+  margin-left: 100px;
+  width: 93%;
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer img {
+  width: 130px;
+}
+
+footer .pie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  align-items: center;
+  height: 210px;
+  border: 1px solid blue;
+}
+
+footer .redes a,
+.redes li {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+.centrado-copiado {
+  display: flex;
+  justify-content: center;
+}
+
+.copy {
+  width: 90%;
+  border-top: 1px solid white;
+  padding: 10px;
+}

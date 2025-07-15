@@ -1,0 +1,185 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+aside.inicio {
+    @include m.ordenador {
+        width: v.$asideTamaño;
+    }
+
+    z-index: 1;
+    box-shadow: 4px 1px 5px 0px rgba(43, 64, 94, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: v.$negro;
+    margin: 0;
+    padding: 0;
+
+    @include m.ordenador {
+        position: fixed;
+        height: 100vh;
+    }
+
+    .image-samuel {
+        transition: 1s;
+        cursor: pointer;
+        margin-top: 2rem;
+        width: 20rem;
+        height: 20rem;
+        background-image: url(../../../src/img/cv.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+    }
+
+    .image-samuel:hover {
+        transition: 0.4s;
+        box-shadow: 0px 0px 28px -1px rgba(43, 64, 94, 0.95);
+    }
+}
+
+.image-menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    .img {
+        fill: #fff;
+        display: block;
+        width: 5.5rem;
+        transition: 0.5S;
+
+        &:hover {
+            transition: 0.5S;
+            fill: v.$azul;
+        }
+
+        @include m.ordenador {
+            display: none;
+        }
+    }
+
+}
+
+.aside__footer {
+    align-items: flex-end;
+    width: min(50rem, 100%);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+    margin-top: auto;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 1rem;
+        border: 3px solid #fff;
+        width: 50px;
+        height: 50px;
+
+        svg {
+            width: 100px;
+        }
+
+        &:nth-child(1):hover {
+            background-color: v.$cWhatsapp;
+            border: v.$cWhatsapp;
+        }
+
+        &:nth-child(2):hover {
+            background-color: v.$negro;
+            border: v.$negro;
+        }
+
+        &:nth-child(3):hover {
+            background-color: v.$cLinkedin;
+            border: v.$cLinkedin;
+        }
+
+        &:nth-child(4):hover {
+            background-color: v.$cYoutube;
+            border: v.$cYoutube;
+        }
+    }
+}
+
+.sections {
+    .aside__footer {
+        a {
+            @include m.ordenador {
+                &:hover {
+                    margin-bottom: 1rem;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30rem;
+    max-width: 100%;
+    height: 0;
+
+    @include m.ordenador {
+        padding: 0 2rem;
+        margin-top: 1rem;
+    }
+}
+
+.nav a {
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 3.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav a {
+    span {
+        transition: 0.5S;
+    }
+}
+
+.nav .espacio:hover {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 7px;
+    color: v.$azul;
+}
+
+.nav .texto:hover {
+    transition: 0.5S;
+    color: v.$azul;
+    margin-left: 7px;
+}
+
+/* menu */
+.nav {
+    transition: visibility .3s ease-in-out, opacity .5s linear;
+    visibility: hidden;
+    opacity: 0;
+
+    @include m.ordenador {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}

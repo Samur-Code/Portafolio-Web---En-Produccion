@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+footer {
+}
+
+.footer {
+    background-color: v.$azul;
+
+    @include m.ordenador {
+        margin-left: 30rem;
+        //display: flex;
+        //justify-content: flex-end;
+        //margin-right: v.$asideTamaño;
+    }
+
+    p {
+        font-size: 2.5rem;
+        color: v.$blanco;
+        text-align: center;
+    }
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        border-bottom: 1px solid v.$blanco;
+    }
+
+}

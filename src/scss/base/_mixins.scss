@@ -1,0 +1,43 @@
+@use 'variables' as v;
+
+@mixin telefono{
+    @media (min-width: v.$telefono){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin ordenador{
+    @media (min-width: v.$pc){
+        @content;
+    }
+}
+
+@mixin ordenadorMas{
+    @media (min-width: v.$pcMax){
+        @content;
+    }
+}
+
+/*para los botoens*/
+@mixin botones($bgColor, $display){
+    background-color: $bgColor;
+    display: $display;
+    text-align: center;
+    text-decoration: none;
+    color: v.$blanco;
+    padding: 1rem;
+    font-weight: bold;
+    //margin-top: $separacion / 2;
+    border: none;
+
+    &:hover{
+        background-color: darken($bgColor, 5);
+        cursor: pointer;
+    }
+}

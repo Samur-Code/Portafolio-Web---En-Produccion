@@ -1,0 +1,174 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+//seccion aparte de proyectos
+.header-secciones {
+    background-color: v.$secundario;
+
+    h1 {
+        color: v.$azul;
+    }
+}
+
+.proyecto-contenedor {
+    width: min(80rem, 100%);
+    margin: 0 auto;
+
+    .tecnologias {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    h3 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    h2 {
+        margin: 2rem 0;
+        font-size: 5rem;
+    }
+
+    p {
+        color: v.$blanco;
+    }
+
+    .enlaces {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            padding: 2rem;
+            color: v.$blanco;
+            //background-color: v.$red;
+        }
+    }
+
+
+}
+
+//agregado de ultimo
+.divProyectos{
+    //box-shadow: 4px 5px 9px 0px rgba(43,64,94,0.75);
+    border: .5rem solid rgba(43, 64, 94, 1);
+    padding: 1rem;
+    background-color: v.$negro;   
+}
+
+.imagenesProyectos{
+    height: 30rem;
+}
+
+.tituloProyecto{
+    color: #fff;
+    padding: 2rem;
+}
+
+.enlacesProyectos{
+    padding: 2rem;
+    margin: .2rem;
+    text-align: center;
+    color: v.$blanco;
+    background-color: v.$azul;
+    transition: 0.5s;
+    &:hover{
+        transition: 0.5s;
+        font-weight: bold;
+        background-color: darken($color: v.$azul, $amount: 20);
+    }
+}
+
+.contenedorEnlace{
+    display: flex;
+    flex-direction: column;
+}
+
+//borrar
+
+//seccion de proyectos del main
+.proyects-grid {
+    gap: 2rem;
+    border-radius: 1rem;
+    display: grid;
+
+    @include m.tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m.ordenador {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+.tecnologias {
+    display: flex;
+}
+
+.proyect {
+    background-color: v.$main-color;
+    border: 5px solid v.$blanco;
+    padding: .5rem;
+
+    .tecnologias {
+        display: flex;
+        margin-left: 1rem;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    .contenido {
+
+        a {
+            margin-top: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        h3 {
+            margin: 0;
+            margin-left: 1rem;
+        }
+    }
+
+    .imagen {
+        img {
+            width: 100%;
+            height: 25rem;
+        }
+    }
+}
+/*
+.footer {
+    margin: 0;
+}
+
+.footer-secciones{
+
+
+    .footer {
+        background-color: v.$azul;
+    
+        @include m.ordenador {
+            justify-content: center;
+            margin-right: 0px;
+        }
+    
+        p {
+            font-size: 2.5rem;
+            color: v.$blanco;
+            text-align: center;
+        }
+    }
+    
+}
+    */
