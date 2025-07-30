@@ -1,8 +1,8 @@
 //array simulador de base de datos de proyectos
 const array = [
   { titulo: "Página Web de Biene Raices ", imagenes: "src/img/proyects-imagenes/header.jpg", enlacesGT: "https://github.com/Samur-Code/bienesraices-MVC-PHP", visitarWeb: "www.google.com" },
-  { titulo: "Evento de Festival de Música", imagenes: "src/img/proyects-imagenes/festival.png", enlacesGT: "https://github.com/Samu4Bit/musicafestival", visitarWeb: "www.youtube.com" },
-  { titulo: "Porfolio Web", imagenes: "src/img/proyects-imagenes/portafolio.png", enlacesGT: "https://github.com/Samur-Code/portafolio-Web", visitarWeb: "www.wikipedia.com" },
+  { titulo: "Evento de Festival de Música", imagenes: "src/img/proyects-imagenes/festival.jpg", enlacesGT: "https://github.com/Samu4Bit/musicafestival", visitarWeb: "www.youtube.com" },
+  { titulo: "Porfolio Web", imagenes: "src/img/proyects-imagenes/portafolio.jpg", enlacesGT: "https://github.com/Samur-Code/portafolio-Web", visitarWeb: "www.wikipedia.com" },
 ];
 
 const arrayDeTecnologias = [
@@ -173,6 +173,12 @@ span.addEventListener("click", function () {
 
 //** Errores en el formulario **//*
 //** Ventana modal de errores**///
+
+window.addEventListener("click", function (event) {
+  if (event.target == modal) {
+    modalValidador.style.display = "none";
+  }
+});
 
 window.addEventListener("click", function (event) {
   if (event.target == modal) {
